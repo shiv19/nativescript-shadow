@@ -1,26 +1,5 @@
-export enum ShadowTypes {
-    OVAL = 1,
-    RECTANGLE = 0
-}
+import { ShadowOptions, TextShadowOptions, ShadowType } from "./index";
 
-export interface ShadowOptions {
-    elevation?: number; // android and iOS
-    backgroundColor?: string; // for android, pass the color of view's background, default: white
-    backgroundAlpha?: number; // for android, value between 0 and 255, 0 for transparent
-    translateZ?: number; // for android
-    shadowType?: ShadowTypes; // for android
-    opacity?: number; // for iOS
-    radius?: number; // android and iOS
-    size?: { width: number; height: number }; // for iOS
-}
-
-export interface TextShadowOptions {
-    // Android only
-    radius: number;
-    xOffset: number;
-    yOffset: number;
-    color: string;
-}
 
 export class Shadow {
     public createBaseShadowOptions(): ShadowOptions {
@@ -42,11 +21,11 @@ export class Shadow {
 
         localShadowOpts.shadowType = localShadowOpts.shadowType
             ? localShadowOpts.shadowType
-            : ShadowTypes.RECTANGLE;
+            : ShadowType.RECTANGLE;
 
-        if (localShadowOpts.shadowType === ShadowTypes.OVAL) {
+        if (localShadowOpts.shadowType === ShadowType.OVAL) {
             shapeType = android.graphics.drawable.GradientDrawable.OVAL;
-        } else if (localShadowOpts.shadowType === ShadowTypes.RECTANGLE) {
+        } else if (localShadowOpts.shadowType === ShadowType.RECTANGLE) {
             shapeType = android.graphics.drawable.GradientDrawable.RECTANGLE;
         }
 

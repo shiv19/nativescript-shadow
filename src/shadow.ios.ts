@@ -1,28 +1,5 @@
-export enum ShadowTypes {
-    OVAL = 1,
-    RECTANGLE = 0,
-    RING = 3,
-    SWEEP_GRADIENT = 2
-}
+import { ShadowOptions, TextShadowOptions } from "./index";
 
-export interface ShadowOptions {
-    elevation?: number; // for android
-    backgroundColor?: string; // for android, pass the color of view's background, default: white
-    backgroundAlpha?: number; // value between 0 and 255, 0 for transparent
-    translateZ?: number; // for android
-    shadowType?: ShadowTypes; // for android
-    opacity?: number;
-    radius?: number; // android and iOS
-    size?: { width: number; height: number };
-}
-
-export interface TextShadowOptions {
-    // Android only
-    radius: number;
-    xOffset: number;
-    yOffset: number;
-    color: string;
-}
 
 export class Shadow {
     public createBaseShadowOptions(): ShadowOptions {
@@ -53,5 +30,5 @@ export class Shadow {
         nativeView.layer.shadowRadius = localShadowOpts.radius;
     }
 
-    public addShadowToText(nsView, textShadowOptions: TextShadowOptions) {}
+    public addShadowToText(nsView, textShadowOptions: TextShadowOptions) { }
 }
