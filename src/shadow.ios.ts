@@ -41,10 +41,14 @@ export class Shadow {
         const nativeView = nsView.ios;
 
         nativeView.layer.shadowColor = UIColor.blackColor.CGColor;
-        nativeView.layer.shadowOffset = CGSizeMake(
-            localShadowOpts.size.width,
-            localShadowOpts.size.height
-        );
+
+        if (localShadowOpts.size) {
+            nativeView.layer.shadowOffset = CGSizeMake(
+                localShadowOpts.size.width,
+                localShadowOpts.size.height
+            );
+        }
+
         nativeView.layer.shadowOpacity = localShadowOpts.opacity;
         nativeView.layer.shadowRadius = localShadowOpts.radius;
     }
