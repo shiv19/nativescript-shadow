@@ -1,5 +1,7 @@
 # nativescript-shadow
 
+This plugin lets you add shadow to any NS View and also add shadow to text.
+
 THIS PLUGIN IS UNDER DEVELOPMENT
 
 ## Screenshots
@@ -26,4 +28,5 @@ Coming soon
 ## License
 
 Copyright 2017 Shiva Prasad and Alexziskind
+
 Apache License Version 2.0, January 2004
