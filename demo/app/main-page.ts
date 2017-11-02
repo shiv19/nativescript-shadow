@@ -213,7 +213,8 @@ export function example7(args: any) {
         translateZ: 30,
         shadowType: ShadowTypes.RECTANGLE,
         opacity: 1,
-        radius: 0
+        radius: 0,
+        size: { height: 5, width: 5 }
     };
     shadowMaker.addShadow(args.object, shadowOptions);
 }
@@ -226,7 +227,8 @@ export function example8(args: any) {
         backgroundAlpha: 255,
         shadowType: ShadowTypes.RECTANGLE,
         opacity: 1,
-        radius: 0
+        radius: 0,
+        size: { height: 5, width: 5 }
     };
     shadowMaker.addShadow(args.object, shadowOptions);
 }
