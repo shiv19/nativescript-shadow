@@ -27,6 +27,6 @@ Coming soon
     
 ## License
 
-Copyright 2017 Shiva Prasad and Alexziskind
+Copyright 2017 Shiva Prasad and Alexander Ziskind
 
 Apache License Version 2.0, January 2004
