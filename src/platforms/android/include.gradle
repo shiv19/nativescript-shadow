@@ -1,0 +1,17 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+android {
+	productFlavors {
+		"nativescript-shadow" {
+			dimension "nativescript-shadow"
+		}
+	}
+}
+
+dependencies {
+	def supportVer = "26.0.0";
+	if(project.hasProperty("supportVersion")) {
+       supportVer = supportVersion
+    }
+    compile "com.android.support:design:$supportVer"
+}
