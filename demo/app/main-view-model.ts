@@ -1,14 +1,26 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import { Shadow } from 'nativescript-shadow';
+import { Observable } from "tns-core-modules/data/observable";
+import { Shadow } from "nativescript-shadow";
+import * as frameModule from "tns-core-modules/ui/frame";
 
 export class HelloWorldModel extends Observable {
-  public message: string;
-  private shadow: Shadow;
+    private shadowMaker: Shadow;
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.shadow = new Shadow();
-    this.message = this.shadow.message;
-  }
+        this.shadowMaker = new Shadow();
+    }
+
+    addShadow() {
+        console.log("code behind");
+        console.log(frameModule.topmost().getViewById("shadowBox"));
+        this.shadowMaker.addShadow(
+            frameModule.topmost().getViewById("shadowBox"),
+            10
+        );
+        this.shadowMaker.addShadow(
+            frameModule.topmost().getViewById("shadowBox2"),
+            5
+        );
+    }
 }
