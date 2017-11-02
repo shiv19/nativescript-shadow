@@ -3,14 +3,39 @@
   <Page.actionBar>
       <ActionBar class="action-bar" title="NativeScript Shadow" />
   </Page.actionBar>
-  <Scrolç>
-  <StackLayout class="p-20">
-    <Button class="btn btn-primary" text="Add Shadow" tap="{{ addShadow }}"/>
-    <StackLayout width="200" backgroundColor="white" class="m-t-30" id="shadowBox">
-      <Image width="200" height="200" src="res://icon" />
-    </StackLayout>
+  <ScrollView>
+    <GridLayout backgroundColor="#f9f9f9" class="p-20" rows="50, auto, 50, auto, 50, auto, 50, auto, 50" columns="*, auto, *, auto, *">
 
-    <StackLayout translateY="-10" id="shadowBox2" class="m-t-30" width="200" height="200" backgroundColor="white">
-    </StackLayout>
-  </StackLayout>
+      <Label row="0" col="1" loaded="exampleText1" verticalAlignment="center" text="Example 1"/>
+      <Label row="0" col="3" loaded="exampleText2" verticalAlignment="center" text="Example 2"/>
+      <StackLayout row="1" col="1"
+        width="100" height="100" loaded="example1" backgroundColor="white"></StackLayout>
+      <StackLayout row="1" col="3"
+        width="100" height="100" loaded="example2" backgroundColor="white"></StackLayout>
+
+      <Label row="2" col="1" loaded="exampleText3" verticalAlignment="center" text="Example 3"/>
+      <Label row="2" col="3" loaded="exampleText4" verticalAlignment="center" text="Example 4"/>
+      <StackLayout row="3" col="1"
+        width="100" height="100" loaded="example3" backgroundColor="white"></StackLayout>
+      <StackLayout row="3" col="3"
+        width="100" height="100" loaded="example4" backgroundColor="white"></StackLayout>
+
+      <Label row="4" col="1" loaded="exampleText5" verticalAlignment="center" text="Example 5"/>
+      <Label row="4" col="3" loaded="exampleText6" verticalAlignment="center" text="Example 6"/>
+      <StackLayout row="5" col="1"
+        width="100" height="100" loaded="example5" backgroundColor="white"></StackLayout>
+      <StackLayout row="5" col="3"
+        width="100" height="100" loaded="example6" backgroundColor="white"></StackLayout>
+
+      <Label row="6" col="1" loaded="exampleText7" verticalAlignment="center" text="Example 7"/>
+      <Label row="6" col="3" loaded="exampleText8" verticalAlignment="center" text="Example 8"/>
+      <StackLayout row="7" col="1"
+        width="100" height="100" loaded="example7" backgroundColor="white"></StackLayout>
+      <StackLayout row="7" col="3"
+        width="100" height="100" loaded="example8" backgroundColor="white">
+          <Image src="res://icon" width="100" height="100"/>
+        </StackLayout>
+
+    </GridLayout>
+  </ScrollView>
 </Page>
