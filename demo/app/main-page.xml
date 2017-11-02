@@ -3,6 +3,7 @@
   <Page.actionBar>
       <ActionBar class="action-bar" title="NativeScript Shadow" />
   </Page.actionBar>
+  <Scrolç>
   <StackLayout class="p-20">
     <Button class="btn btn-primary" text="Add Shadow" tap="{{ addShadow }}"/>
     <StackLayout width="200" backgroundColor="white" class="m-t-30" id="shadowBox">

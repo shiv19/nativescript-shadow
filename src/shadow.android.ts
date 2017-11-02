@@ -1,17 +1,25 @@
+import { ShadowOptions } from "./index";
+
 export class Shadow {
-    addShadow(nsView, elevation: number) {
+    public createBaseShadowOptions(): ShadowOptions {
+        return {
+            elevation: 10,
+            backgroundColor: "#ffffff"
+        };
+    }
+
+    public addShadow(nsView, shadowOptions: ShadowOptions): void {
+        const localShadowOpts = shadowOptions.elevation
+            ? shadowOptions
+            : this.createBaseShadowOptions();
+
         const nativeView = nsView.android;
-        const parent = nsView.parent.android;
-        console.log("came here");
-        // nativeView.setClipToOutline(false);
-
-        // parent.setClipToOutline(false);
-        // nativeView.setElevation(10.0);
-
         var shape = new android.graphics.drawable.GradientDrawable();
         shape.setShape(android.graphics.drawable.GradientDrawable.RECTANGLE);
-        shape.setColor(android.graphics.Color.parseColor("#ffffff"));
+        shape.setColor(
+            android.graphics.Color.parseColor(localShadowOpts.backgroundColor)
+        );
         nativeView.setBackgroundDrawable(shape);
-        nativeView.setElevation(elevation);
+        nativeView.setElevation(localShadowOpts.elevation);
     }
 }
