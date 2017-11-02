@@ -25,4 +25,5 @@ Coming soon
     
 ## License
 
+Copyright 2017 Shiva Prasad and Alexziskind
 Apache License Version 2.0, January 2004
