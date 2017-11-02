@@ -5,9 +5,11 @@
   </Page.actionBar>
   <StackLayout class="p-20">
     <Button class="btn btn-primary" text="Add Shadow" tap="{{ addShadow }}"/>
-    <Image id="shadowBox" class="m-t-30" width="200" height="200" src="res://icon" />
+    <StackLayout width="200" backgroundColor="white" class="m-t-30" id="shadowBox">
+      <Image width="200" height="200" src="res://icon" />
+    </StackLayout>
 
-    <GridLayout translateY="-10" id="shadowBox2" class="m-t-30" width="200" height="200" backgroundColor="purple" >
-    </GridLayout>
+    <StackLayout translateY="-10" id="shadowBox2" class="m-t-30" width="200" height="200" backgroundColor="white">
+    </StackLayout>
   </StackLayout>
 </Page>
