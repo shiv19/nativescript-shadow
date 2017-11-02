@@ -1,3 +1,11 @@
+export interface ShadowOptions {
+    elevation?: number;
+    opacity?: number;
+    radius?: number;
+    size?: { width: number, height: number }
+}
+
 export declare class Shadow {
-    addShadow(view: any, elevation: number): void;
+    createBaseShadowOptions(): ShadowOptions;
+    addShadow(view: any, shadowOptions: ShadowOptions): void;
 }
