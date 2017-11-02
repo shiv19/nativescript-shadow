@@ -2,6 +2,11 @@
 
 THIS PLUGIN IS UNDER DEVELOPMENT
 
+## Screenshots
+
+### Android
+<img src="https://github.com/shiv19/nativescript-shadow/blob/master/assets/androiddemo.png?raw=true" height="320" > 
+
 ## Installation
 
 Describe your plugin installation steps. Ideally it would be something like:
