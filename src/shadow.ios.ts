@@ -1,5 +1,11 @@
 import { ShadowOptions, TextShadowOptions } from "./index";
 
+export enum ShadowType {
+    RECTANGLE = 0,
+    OVAL = 1,
+    SWEEP_GRADIENT = 2,
+    RING = 3
+}
 
 export class Shadow {
     public createBaseShadowOptions(): ShadowOptions {
@@ -17,6 +23,7 @@ export class Shadow {
 
         const nativeView = nsView.ios;
 
+        nsView.clipToBounds = false;
         nativeView.layer.shadowColor = UIColor.blackColor.CGColor;
 
         if (localShadowOpts.size) {

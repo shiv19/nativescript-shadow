@@ -1,4 +1,11 @@
-import { ShadowOptions, TextShadowOptions, ShadowType } from "./index";
+import { ShadowOptions, TextShadowOptions } from "./index";
+
+export enum ShadowType {
+    RECTANGLE = 0,
+    OVAL = 1,
+    SWEEP_GRADIENT = 2,
+    RING = 3
+}
 
 
 export class Shadow {
