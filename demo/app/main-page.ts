@@ -3,7 +3,7 @@ import * as pages from "tns-core-modules/ui/page";
 import {
     Shadow,
     ShadowOptions,
-    ShadowTypes,
+    ShadowType,
     TextShadowOptions
 } from "nativescript-shadow";
 
@@ -108,7 +108,7 @@ export function example1(args: any) {
         elevation: 10,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 0,
         size: {
@@ -125,7 +125,7 @@ export function example2(args: any) {
         elevation: 20,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 0,
         size: {
@@ -142,7 +142,7 @@ export function example3(args: any) {
         elevation: 10,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.OVAL,
+        shadowType: ShadowType.OVAL,
         opacity: 1,
         radius: 0,
         size: {
@@ -159,7 +159,7 @@ export function example4(args: any) {
         elevation: 20,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.OVAL,
+        shadowType: ShadowType.OVAL,
         opacity: 1,
         radius: 0,
         size: {
@@ -176,7 +176,7 @@ export function example5(args: any) {
         elevation: 10,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 25,
         size: {
@@ -193,7 +193,7 @@ export function example6(args: any) {
         elevation: 10,
         backgroundColor: "#ffffff",
         backgroundAlpha: 100,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 25,
         size: {
@@ -211,7 +211,7 @@ export function example7(args: any) {
         backgroundColor: "#FB801D",
         backgroundAlpha: 255,
         translateZ: 30,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 0,
         size: { height: 5, width: 5 }
@@ -225,7 +225,7 @@ export function example8(args: any) {
         elevation: 20,
         backgroundColor: "#ffffff",
         backgroundAlpha: 255,
-        shadowType: ShadowTypes.RECTANGLE,
+        shadowType: ShadowType.RECTANGLE,
         opacity: 1,
         radius: 0,
         size: { height: 5, width: 5 }
